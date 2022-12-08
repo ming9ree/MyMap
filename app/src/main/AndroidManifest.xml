@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--네이버지도 현재위치 불러오기-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyMap"
         tools:targetApi="31">
-        <!--네이버지도-->
+        <!--네이버지도 API 불러오기-->
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="loea53jit4" />

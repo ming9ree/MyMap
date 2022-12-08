@@ -4,13 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <!--네이버지도-->
-    <fragment android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <fragment
         android:id="@+id/map"
-        android:name="com.naver.maps.map.MapFragment" />
+        android:name="com.naver.maps.map.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navermap_latitude="38.628104"
+        app:navermap_longitude="127.090387"
+        app:navermap_zoom="16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ToggleButton
+            android:id="@+id/btn_parking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="주차장"
+            android:textOff="주차장"/>
+
+        <ToggleButton
+            android:id="@+id/btn_entrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="출입구"
+            android:textOff="출입구"/>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
